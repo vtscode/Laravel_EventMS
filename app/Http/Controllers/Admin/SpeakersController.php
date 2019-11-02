@@ -35,6 +35,10 @@ class SpeakersController extends Controller
     public function store(StoreSpeakerRequest $request)
     {
         $speaker = Speaker::create($request->all());
+        $data = $speaker->addMedia(storage_path('tmp/uploads/' . $request->input('photo')));
+
+        dd();
+
 
         if ($request->input('photo', false)) {
             $speaker->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');

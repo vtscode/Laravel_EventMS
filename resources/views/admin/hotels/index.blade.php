@@ -61,8 +61,8 @@
                                 @if($hotel->photo)
 
                                     
-                                    <a href="{{ imgPath($hotel->photo->getUrl()) }}" target="_blank">
-                                        <img src="{{ imgPath($hotel->photo->getUrl('thumb')) }}" width="50px" height="50px">
+                                    <a href="{{ $hotel->photo->getUrl() }}" target="_blank">
+                                        <img src="{{ $hotel->photo->getUrl('thumb') }}" width="50px" height="50px">
                                     </a>
                                 @endif
                             </td>

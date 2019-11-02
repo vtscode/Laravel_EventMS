@@ -48,8 +48,8 @@
                         </th>
                         <td>
                             @if($speaker->photo)
-                                <a href="{{ imgPath($speaker->photo->getUrl()) }}" target="_blank">
-                                    <img src="{{ imgPath($speaker->photo->getUrl('thumb')) }}" width="50px" height="50px">
+                                <a href="{{ $speaker->photo->getUrl() }}" target="_blank">
+                                    <img src="{{ $speaker->photo->getUrl('thumb') }}" width="50px" height="50px">
                                 </a>
                             @endif
                         </td>

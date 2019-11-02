@@ -10,7 +10,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="speaker">
             {{-- {{ dd($speaker->photo->getUrl()) }} --}}
-            <img src="{{ imgPath($speaker->photo->getUrl()) }}" alt="{{ $speaker->name }}" class="img-fluid">
+            <img src="{{ $speaker->photo->getUrl() }}" alt="{{ $speaker->name }}" class="img-fluid">
             <div class="details">
               <h3><a href="{{ route('speaker', $speaker->id) }}">{{ $speaker->name }}</a></h3>
               <p>{{ $speaker->description }}</p>

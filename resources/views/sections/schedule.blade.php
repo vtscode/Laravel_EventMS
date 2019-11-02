@@ -25,7 +25,7 @@
               <div class="col-md-10">
                 @if($schedule->speaker)
                   <div class="speaker">
-                    <img src="{{ imgPath($schedule->speaker->photo->getUrl()) }}" alt="{{ $schedule->speaker->name }}">
+                    <img src="{{ $schedule->speaker->photo->getUrl() }}" alt="{{ $schedule->speaker->name }}">
                   </div>
                 @endif
                 <h4>{{ $schedule->title }} @if($schedule->speaker)<span>{{ $schedule->speaker->name }}</span>@endif</h4>

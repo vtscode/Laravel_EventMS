@@ -11,7 +11,7 @@
 
       <div class="row">
         <div class="col-md-6">
-          <img src="{{ imgPath($speaker->photo->getUrl()) }}" alt="{{ $speaker->name }}" class="img-fluid">
+          <img src="{{ $speaker->photo->getUrl() }}" alt="{{ $speaker->name }}" class="img-fluid">
         </div>
 
         <div class="col-md-6">
