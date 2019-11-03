@@ -33,7 +33,7 @@
                         <td>
                             @if($hotel->photo)
                                 <a href="{{ $hotel->photo->getUrl() }}" target="_blank">
-                                    <img src="{{ $hotel->photo->getUrl('thumb') }}" width="50px" height="50px">
+                                    <img src="{{ $hotel->photo->getUrl() }}" width="50px" height="50px">
                                 </a>
                             @endif
                         </td>

@@ -33,7 +33,7 @@
                         <td>
                             @if($sponsor->logo)
                                 <a href="{{ $sponsor->logo->getUrl() }}" target="_blank">
-                                    <img src="{{ $sponsor->logo->getUrl('thumb') }}" width="50px" height="50px">
+                                    <img src="{{ $sponsor->logo->getUrl() }}" width="50px" height="50px">
                                 </a>
                             @endif
                         </td>

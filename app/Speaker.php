@@ -49,7 +49,7 @@ class Speaker extends Model implements HasMedia
     public function getPhotoAttribute()
     {
         $file = $this->getMedia('photo')->last();
-
+        
         if ($file) {
             $file->url       = $file->getUrl();
             $file->thumbnail = $file->getUrl('thumb');
