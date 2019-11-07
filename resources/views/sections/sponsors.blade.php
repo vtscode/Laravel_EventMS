@@ -9,7 +9,11 @@
       @foreach($sponsors as $sponsor)
         <div class="col-lg-3 col-md-4 col-xs-6">
           <div class="supporter-logo">
+            @if(!is_null($sponsor->logo->getUrl()))
             <img src="{{ $sponsor->logo->getUrl() }}" class="img-fluid" alt="{{ $sponsor->name }}">
+            @else
+            <img src="{{ '' }}" class="img-fluid" alt="{{ $sponsor->name }}">
+            @endif
           </div>
         </div>
       @endforeach

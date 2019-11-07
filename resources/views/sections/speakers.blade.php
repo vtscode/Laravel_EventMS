@@ -9,8 +9,12 @@
       @foreach($speakers as $speaker)
         <div class="col-lg-4 col-md-6">
           <div class="speaker">
-            {{-- {{ dd($speaker->photo->getUrl()) }} --}}
+            @if(!is_null($speaker->photo->getUrl()))
             <img src="{{ $speaker->photo->getUrl() }}" alt="{{ $speaker->name }}" class="img-fluid">
+            @else
+            <img src="{{ '' }}" alt="{{ $speaker->name }}" class="img-fluid">
+            @endif
+            
             <div class="details">
               <h3><a href="{{ route('speaker', $speaker->id) }}">{{ $speaker->name }}</a></h3>
               <p>{{ $speaker->description }}</p>

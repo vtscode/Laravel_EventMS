@@ -11,7 +11,11 @@
         <div class="col-lg-4 col-md-6">
           <div class="hotel">
             <div class="hotel-img">
+            @if(!is_null($hotel->photo->getUrl()))
               <img src="{{ $hotel->photo->getUrl() }}" alt="{{ $hotel->name }}" class="img-fluid">
+            @else
+                <img src="{{ '' }}" alt="{{ $hotel->name }}" class="img-fluid">
+            @endif
             </div>
             <h3><a href="#">{{ $hotel->name }}</a></h3>
             <div class="stars">

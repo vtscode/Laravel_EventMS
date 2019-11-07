@@ -11,7 +11,12 @@
 
       <div class="row">
         <div class="col-md-6">
-          <img src="{{ $speaker->photo->getUrl() }}" alt="{{ $speaker->name }}" class="img-fluid">
+            @if(!is_null($speaker->photo->getUrl()))
+            <img src="{{ $speaker->photo->getUrl() }}" alt="{{ $speaker->name }}" class="img-fluid">
+            @else
+            <img src="{{ '' }}" alt="{{ $speaker->name }}" class="img-fluid">
+            @endif
+        
         </div>
 
         <div class="col-md-6">

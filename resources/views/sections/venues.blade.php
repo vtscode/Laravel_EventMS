@@ -27,9 +27,15 @@
           @foreach($venue->photos as $photo)
             <div class="col-lg-3 col-md-4">
               <div class="venue-gallery">
+                @if(!is_null($photo->getUrl()))
                 <a href="{{ $photo->getUrl() }}" class="venobox" data-gall="venue-gallery">
                   <img src="{{ $photo->getUrl() }}" alt="" class="img-fluid">
                 </a>
+                @else
+                <a href="{{ '' }}" class="venobox" data-gall="venue-gallery">
+                  <img src="{{ '' }}" alt="" class="img-fluid">
+                </a>
+                @endif
               </div>
             </div>
           @endforeach
